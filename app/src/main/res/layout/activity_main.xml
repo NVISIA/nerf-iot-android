@@ -9,35 +9,56 @@
         android:background="@color/background">
 
 
-        <ImageButton
-                android:id="@+id/fire_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/arcade_button_selector"
-                android:layout_centerInParent="true"
-                />
-
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FIRE"
-                android:layout_above="@id/fire_button"
-                android:layout_centerHorizontal="true"/>
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
 
-        <Switch
-                android:id="@+id/motor_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:padding="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"/>
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/event_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/toolbar"
+            android:layout_above="@+id/fire_label"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            >
 
-        <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Turn On Motor"
-                android:layout_above="@id/motor_switch"
-                android:layout_centerHorizontal="true"/>
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageButton
+            android:id="@+id/fire_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arcade_button_selector"
+            android:layout_centerInParent="true"
+            />
+
+    <TextView
+            android:id="@+id/fire_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FIRE"
+            android:layout_above="@id/fire_button"
+            android:layout_centerHorizontal="true"/>
+
+
+    <Switch
+            android:id="@+id/motor_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn On Motor"
+            android:layout_above="@id/motor_switch"
+            android:layout_centerHorizontal="true"/>
 </RelativeLayout>
